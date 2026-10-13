@@ -1,0 +1,7 @@
+# Sobe um Kafka (1 broker, modo KRaft, sem Zookeeper) acessível em localhost:9092
+services:
+  kafka:
+    image: apache/kafka:3.9.0
+    container_name: kafka
+    ports:
+      - "9092:9092"
