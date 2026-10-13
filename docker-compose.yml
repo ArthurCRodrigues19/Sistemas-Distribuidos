@@ -5,3 +5,9 @@ services:
     container_name: kafka
     ports:
       - "9092:9092"
+    # Guarda os dados do Kafka na memória (somem ao desligar),
+    # assim o Docker não cria volumes com nomes aleatórios
+    tmpfs:
+      - /var/lib/kafka/data
+      - /etc/kafka/secrets
+      - /mnt/shared/config
